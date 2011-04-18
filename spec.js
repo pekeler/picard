@@ -1,4 +1,4 @@
-var jasmine = require('jasmine-node/lib/jasmine'),
+var jasmine = require('jasmine-node/lib/jasmine-node'),
     spawn = require('child_process').spawn,
     util = require('util'),
     http = require('http'),
