@@ -2,7 +2,7 @@ var jasmine = require('jasmine-node/lib/jasmine-node'),
     spawn = require('child_process').spawn,
     util = require('util'),
     http = require('http'),
-    sys = require('sys')
+    util = require('util')
     
 for(var key in jasmine)
   global[key] = jasmine[key]
@@ -71,8 +71,8 @@ var SpecRunner = {
     })
 
     app.stderr.on('data', function(data){
-      sys.puts('fuck!')
-      sys.puts(data.toString())
+      util.puts('fuck!')
+      util.puts(data.toString())
     })
 
     app.on('exit', cb)

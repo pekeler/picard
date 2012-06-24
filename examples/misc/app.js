@@ -10,7 +10,7 @@ error(function(ex){ // custom error handler, takes an exception arg
       '<h3>' + ex.message + '</h3>' +
       '<pre>' + ex.stack + '</pre>'
   })
-  require('sys').puts(ex.stack)
+  require('util').puts(ex.stack)
 }).
 
 notFound(function(){ // custom 404 action

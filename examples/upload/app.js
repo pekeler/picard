@@ -4,7 +4,7 @@ var Picard = require('../../lib/picard').start()
 // so you'll have to pull in your own library if you need it:
 
 var formidable = require('formidable') // see https://github.com/felixge/node-formidable
-var sys = require('sys')
+var util = require('util')
 
 Picard.post('/upload', function(request){
   var form = new formidable.IncomingForm()
@@ -16,7 +16,7 @@ Picard.post('/upload', function(request){
     .on('end', function(){ 
       request.onScreen(
         'Title field: ' + request.title + '<br />' +
-        'Uploaded file: ' + sys.inspect(request.upload)
+        'Uploaded file: ' + util.inspect(request.upload)
       ) 
     })
     .parse(request)
