@@ -74,7 +74,7 @@ Picard.routeSet('afters', function(){
   })
   
   this.after(function(env){
-    require('sys').puts(env.foo) // "bar!"
+    require('util').puts(env.foo) // "bar!"
   })
   
   this.get('/foo_path', function(env){
